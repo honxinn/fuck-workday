@@ -1,0 +1,26 @@
+{
+  "extends": "eslint-config-egg",
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true,
+      "modules": true
+    }
+  },
+  "env": {
+    "amd": true,
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "linebreak-style": 0,
+    "no-trailing-spaces": 0,
+    "semi": "off"
+  },
+  "globals": {
+    "module": true
+  }
+}

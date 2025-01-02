@@ -1,0 +1,36 @@
+{
+  "name": "fuck-workday",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/fuck-workday.cjs.js",
+  "module": "lib/fuck-workday.esm.js",
+  "browser": "lib/fuck-workday.umd.js",
+  "scripts": {
+    "build": "node script/build.js",
+    "dev": "rollup -c -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "workday",
+    "cn-workday",
+    "workday-cn",
+    "chinese-workday",
+    "china-workday"
+  ],
+  "author": "HonXin",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "eslint": "^8.57.1",
+    "eslint-config-egg": "^14.0.0",
+    "rollup": "^4.29.1"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13"
+  }
+}
