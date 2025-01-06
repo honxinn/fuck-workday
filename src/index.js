@@ -1,3 +1,3 @@
-import * as fuckWorkday from './core'
+import * as workdayCn from './core'
 
-export default fuckWorkday
+export default workdayCn
