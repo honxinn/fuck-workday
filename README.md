@@ -5,12 +5,13 @@
 [![](https://img.shields.io/badge/npm-v1.0.0-blue)](https://www.npmjs.com/package/workday-cn)
 
 ## 特性
-- 支持法定节假日判断
-- 支持调休工作日判断
-- 支持工作日范围计算
-- 基于 Day.js
-- 零配置，开箱即用
-- 支持多种模块规范 (CommonJS/ESM/UMD)
+- 📅 支持 2018 年至今的节假日数据
+- 🏢 支持法定节假日判断
+- 🔄 支持调休工作日判断
+- 📊 支持工作日范围计算
+- 💾 支持离线使用 (静态数据)
+- ⚡ 零配置，开箱即用
+- 📦 支持多种模块规范 (CommonJS/ESM/UMD)
 
 ## 安装
 
@@ -111,7 +112,7 @@ const type = getDateType(new Date('2024-05-01')); // 'holiday'
 ## 注意事项
 
 - 日期参数支持 Date 对象或 'YYYY-MM-DD' 格式的字符串
-- 节假日数据基于国务院发布的法定节假日安排
+- 节假日数据基于国务院发布的法定节假日安排[《全国年节及纪念日放假办法》](https://www.gov.cn/zhengce/content/202411/content_6986380.htm)
 - 每年的节假日数据会定期更新
 
 ## 许可

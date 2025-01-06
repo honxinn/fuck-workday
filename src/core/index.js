@@ -1,14 +1,21 @@
-import dayjs from 'dayjs'
-import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
-import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
-import isBetween from 'dayjs/plugin/isBetween'
 import { HOLIDAYS, WORKDAYS } from '../holidays'
 import { WORKDAY, HOLIDAY, WEEKEND } from '../common/constant'
-dayjs.extend(isSameOrBefore)
-dayjs.extend(isSameOrAfter)
-dayjs.extend(isBetween)
 
-const formatDate = date => dayjs(date).format('YYYY-MM-DD')
+const formatDate = date => {
+  if (!date) {
+    throw new Error('Date is required')
+  }
+  
+  const d = new Date(date)
+  if (isNaN(d.getTime())) {
+    throw new Error('Invalid date format')
+  }
+  
+  const year = d.getFullYear()
+  const month = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
 
 /**
  * 判断是否是工作日
@@ -38,8 +45,8 @@ export function isHoliday(date) {
  * @return {boolean} - 是否是周末
  */
 export function isWeekend(date) {
-  const d = dayjs(date)
-  const day = d.day()
+  const d = new Date(date)
+  const day = d.getDay()
   return day === 0 || day === 6
 }
 
@@ -64,9 +71,13 @@ export function getWorkdays(date, type = 'week') {
     throw new Error('Invalid type: must be "week" or "month"')
   }
   
-  const d = dayjs(date)
-  const start = d.startOf(type)
-  const end = d.endOf(type)
+  const d = new Date(date)
+  const start = type === 'week' 
+    ? new Date(d.setDate(d.getDate() - d.getDay())) 
+    : new Date(d.getFullYear(), d.getMonth(), 1)
+  const end = type === 'week'
+    ? new Date(d.setDate(d.getDate() + 6))
+    : new Date(d.getFullYear(), d.getMonth() + 1, 0)
   return getWorkdaysBetween(start, end)
 }
 
@@ -76,11 +87,11 @@ export function getWorkdays(date, type = 'week') {
  * @return {Date} - 下一个工作日
  */
 export function getNextWorkday(date) {
-  let d = dayjs(date)
+  const d = new Date(date)
   while (!isWorkday(d)) {
-    d = d.add(1, 'day')
+    d.setDate(d.getDate() + 1)
   }
-  return d.toDate()
+  return d
 }
 
 /**
@@ -91,18 +102,18 @@ export function getNextWorkday(date) {
  */
 export function getWorkdaysBetween(startDate, endDate) {
   if (!startDate || !endDate) throw new Error('Invalid Arguments: startDate and endDate are required')
-  const start = dayjs(startDate)
-  const end = dayjs(endDate)
   const days = []
+  const start = new Date(startDate)
+  const end = new Date(endDate)
 
-  if (start.isAfter(end)) return days
+  if (start > end) return days
   
-  let current = start
-  while (current.isSameOrBefore(end, 'day')) {
+  const current = new Date(start)
+  while (current <= end) {
     if (isWorkday(current)) {
-      days.push(current.toDate())
+      days.push(new Date(current))
     }
-    current = current.add(1, 'day')
+    current.setDate(current.getDate() + 1)
   }
   return days
 }
@@ -130,7 +141,7 @@ export function getMonthWorkdays(year, month) {
   if (typeof month !== 'number' || isNaN(month)) throw new Error('Invalid Type: month must be a number')
 
   if (month < 1 || month > 12) throw new Error('Invalid month')
-  const startDate = dayjs(`${year}-${month}-01`)
-  const endDate = startDate.endOf('month')
+  const startDate = new Date(year, month - 1, 1)
+  const endDate = new Date(year, month, 0)
   return getWorkdaysBetween(startDate, endDate).length
 }

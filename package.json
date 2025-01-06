@@ -21,7 +21,7 @@
     "type": "git",
     "url": "git+https://github.com/honxinn/workday-cn.git"
   },
-  "homepage": "https://github.com/honxinn/workday-cn",
+  "homepage": "https://github.com/honxinn/workday-cn#readme",
   "author": "HonXin",
   "license": "ISC",
   "devDependencies": {
@@ -34,8 +34,5 @@
     "eslint": "^8.57.1",
     "eslint-config-egg": "^14.0.0",
     "rollup": "^4.29.1"
-  },
-  "dependencies": {
-    "dayjs": "^1.11.13"
   }
 }
