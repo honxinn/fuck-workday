@@ -1,10 +1,10 @@
 {
-  "name": "fuck-workday",
+  "name": "workday-cn",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/fuck-workday.cjs.js",
-  "module": "lib/fuck-workday.esm.js",
-  "browser": "lib/fuck-workday.umd.js",
+  "main": "lib/workday-cn.cjs.js",
+  "module": "lib/workday-cn.esm.js",
+  "browser": "lib/workday-cn.umd.js",
   "scripts": {
     "build": "node script/build.js",
     "dev": "rollup -c -w",
@@ -19,9 +19,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/honxinn/fuck-workday.git"
+    "url": "git+https://github.com/honxinn/workday-cn.git"
   },
-  "homepage": "https://github.com/honxinn/fuck-workday",
+  "homepage": "https://github.com/honxinn/workday-cn",
   "author": "HonXin",
   "license": "ISC",
   "devDependencies": {

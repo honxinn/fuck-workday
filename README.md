@@ -1,10 +1,10 @@
-# fuck-workday
+# workday-cn
 
 > 一个用于判断中国工作日的 JavaScript 工具包，支持法定节假日和调休判断。
 
 [![](https://img.shields.io/badge/version-v1.0.0-success)]()
 [![](https://img.shields.io/badge/keywords-workday,cn_workday,chinese_workday-blue)]()
-[![](https://img.shields.io/badge/license-MIT-success)](https://github.com/honxinn/fuck-workday/blob/main/LICENSE)
+[![](https://img.shields.io/badge/license-MIT-success)](https://github.com/honxinn/workday-cn/blob/main/LICENSE)
 
 
 ## 特性
@@ -19,9 +19,9 @@
 ## 安装
 
 ```bash
-npm install fuck-workday
+npm install workday-cn
 # 或
-yarn add fuck-workday
+yarn add workday-cn
 ```
 
 ## 使用
@@ -30,14 +30,14 @@ yarn add fuck-workday
 
 ```javascript
 // ESM
-import { isWorkday } from 'fuck-workday';
+import { isWorkday } from 'workday-cn';
 
 // CommonJS
-const { isWorkday } = require('fuck-workday');
+const { isWorkday } = require('workday-cn');
 
 // UMD (通过 CDN)
-<script src="https://unpkg.com/fuck-workday/dist/fuck-workday.umd.js"></script>
-const { isWorkday } = window.FuckWorkday;
+<script src="https://unpkg.com/workday-cn/dist/workday-cn.umd.js"></script>
+const { isWorkday } = window.workdayCn;
 ```
 
 ## API
