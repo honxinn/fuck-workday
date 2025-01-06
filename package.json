@@ -17,6 +17,11 @@
     "chinese-workday",
     "china-workday"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/honxinn/fuck-workday.git"
+  },
+  "homepage": "https://github.com/honxinn/fuck-workday",
   "author": "HonXin",
   "license": "ISC",
   "devDependencies": {
