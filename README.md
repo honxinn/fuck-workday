@@ -19,9 +19,9 @@
 ## 安装
 
 ```bash
-npm install cn-workday
+npm install fuck-workday
 # 或
-yarn add cn-workday
+yarn add fuck-workday
 ```
 
 ## 使用
