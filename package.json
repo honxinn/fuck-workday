@@ -1,6 +1,6 @@
 {
   "name": "workday-cn",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "lib/workday-cn.cjs.js",
   "module": "lib/workday-cn.esm.js",
