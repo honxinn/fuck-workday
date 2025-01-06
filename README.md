@@ -33,7 +33,7 @@ import { isWorkday } from 'workday-cn';
 const { isWorkday } = require('workday-cn');
 
 // UMD (通过 CDN)
-<script src="https://unpkg.com/workday-cn/dist/workday-cn.umd.js"></script>
+<script src="https://unpkg.com/workday-cn/lib/workday-cn.umd.js"></script>
 const { isWorkday } = window.workdayCn;
 ```
 
