@@ -2,7 +2,7 @@
 
 > 一个用于判断中国工作日的 JavaScript 工具包，支持法定节假日和调休判断。
 
-[![](https://img.shields.io/badge/npm-v1.0.0-blue)](https://www.npmjs.com/package/workday-cn)
+[![](https://img.shields.io/badge/npm-v1.0.4-blue)](https://www.npmjs.com/package/workday-cn)
 
 ## 特性
 - 📅 支持 2018 年至今的节假日数据
