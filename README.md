@@ -2,13 +2,9 @@
 
 > 一个用于判断中国工作日的 JavaScript 工具包，支持法定节假日和调休判断。
 
-[![](https://img.shields.io/badge/version-v1.0.0-success)]()
-[![](https://img.shields.io/badge/keywords-workday,cn_workday,chinese_workday-blue)]()
-[![](https://img.shields.io/badge/license-MIT-success)](https://github.com/honxinn/workday-cn/blob/main/LICENSE)
-
+[![](https://img.shields.io/badge/npm-v1.0.0-blue)](https://www.npmjs.com/package/workday-cn)
 
 ## 特性
-
 - 支持法定节假日判断
 - 支持调休工作日判断
 - 支持工作日范围计算
